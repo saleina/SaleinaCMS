@@ -1,0 +1,5 @@
+https://saleinacms.com/* https://saleinacms.org/:splat 301!
+https://www.saleinacms.com/* https://saleinacms.org/:splat 301!
+
+# Optional: Redirect default Netlify subdomain to primary domain
+https://saleinacms.netlify.com/* https://saleinacms.org/:splat 301!
