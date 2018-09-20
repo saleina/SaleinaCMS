@@ -1,0 +1,42 @@
+{{ define "title" }}Saleina CMS | {{ .Title }}{{ end }}
+
+{{ define "main" }}
+
+<div id="main-docs">
+
+	<aside id="aside">
+
+		<h5>Getting Started</h5>
+		<ul>
+			{{ range where .Site.Pages ".Params.group" "start" }}
+			<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+			{{ end }}
+		</ul>
+
+		<h5>Widgets</h5>
+		<ul>
+			{{ range where .Site.Pages ".Params.group" "widgets" }}
+			<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+			{{ end }}
+		</ul>
+		
+		<h5>Reference</h5>
+		<ul>
+			{{ range where .Site.Pages ".Params.group" "reference" }}
+			<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+			{{ end }}
+		</ul>
+
+	</aside>
+
+	<div id="docs-content">
+
+		<h1>{{ .Title }}</h1>
+		
+		{{ .Content }}
+
+	</div>
+
+</div>
+
+{{ end }}

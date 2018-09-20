@@ -1,0 +1,16 @@
+baseURL = ""
+
+languageCode = "en-us"
+
+relativeurls = true
+
+disableKinds = ["RSS"]
+
+pygmentsCodeFences = true
+
+[blackfriday]
+extensions = ["hardLineBreak"]
+
+[permalinks]
+    tags = "/blog/tags/:slug:/"
+    categories = "/blog/categories/:slug:/"

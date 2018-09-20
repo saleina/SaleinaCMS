@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ block "title" . }}{{ end }}</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800,900">
+</head>
+<body>
+    <header>
+        <a id="logo" href="/"><img src="/images/logo.png" alt="Saleina CMS logo"></a>
+        <ul id="nav">
+            <li><a href="/docs/introduction/">docs</a></li>
+            <li><a href="/blog/">blog</a></li>
+        </ul>
+        <a href="https://demo.saleinacms.org" class="button">demo</a>
+    </header>
+
+    <main id="main">
+        {{ block "main" . }}
+        {{ end }}
+    </main>
+
+    <footer id="footer">
+        <a class="button" href="https://gitlab.com/saleina/saleinacms">GitLab</a>
+        <a class="button" href="tg://resolve?domain=saleinacms">Telegram</a>
+        <a href="https://gitlab.com/saleina/saleinacms/LICENSE">Distributed under MIT License</a> | <a href="https://gitlab.com/saleina/saleinacms/CODE_OF_CONDUCT.md">Code of Conduct</a>
+
+    </footer>
+</body>
+</html>

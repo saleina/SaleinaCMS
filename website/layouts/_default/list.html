@@ -1,0 +1,9 @@
+{{ define "title" }}Saleina CMS Blog{{ end }}
+
+{{ define "main" }}
+<div id="blog-posts">
+	{{ range .Paginator.Pages }}
+	{{ .Render "li" }}
+	{{ end }}
+</div>
+{{ end }}

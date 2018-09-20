@@ -1,0 +1,41 @@
+backend:
+    name: gitlab
+    repo: saleina/saleinacms
+    client_id: 83cb793b4a6a96883c9502178b2c58151310851f9e44263f9ff19c3ad0da7357
+    branch: master
+
+media_folder: /website/static/images/uploads/
+
+public_folder: /images/uploads/
+
+collections:
+    - label: Blog
+      name: blog
+      folder: website/content/blog
+      tabs:
+        - label: Basic
+          fields:
+            - {label: Title, name: title, widget: string}
+            - {label: Publish Date, name: date, widget: datetime, format: "Z"}
+        - label: Body
+          fields:
+            - {label: Body, name: body, widget: markdown}
+
+    - label: Docs
+      name: docs
+      folder: website/content/docs
+      tabs:
+        - label: Basic
+          fields:
+            - {label: Title, name: title, widget: string}
+            - label: Group
+              name: group
+              widget: select
+              options:
+                - {label: Start, value: start}
+                - {label: Widgets, value: widgets}
+                - {label: Reference, value: reference}
+            - {label: Weight, name: weight, widget: number, required: false}
+        - label: Body
+          fields:
+            - {label: Body, name: body, widget: markdown}

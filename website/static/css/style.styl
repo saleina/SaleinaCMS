@@ -1,0 +1,206 @@
+@import "../../../node_modules/nib"
+
+$white = #fff
+$black = #323d47
+$green = #009688
+$lightgreen = #aeddd9
+$grey = #fafbfb
+$darkgrey = #939393
+
+*
+    padding 0
+    margin 0
+    outline none
+    border none
+    box-sizing border-box
+    font-family "Open Sans"
+    
+a
+    color $green
+    
+a.button
+    text-decoration none
+    text-transform uppercase
+    color $white
+    background $green
+    font-weight 700
+    display inline-block
+    height 30px
+    line-height 30px
+    padding 0 20px
+    border-radius 3px
+    transition all .3s linear
+    &:hover
+        transition all .3s linear
+        box-shadow 0px 0px 2px 2px rgba(0,0,0,0.30)
+    
+body, html
+    height 100%
+    
+body
+    max-width 1150px
+    width 100%
+    margin 0 auto
+    color $black
+    background-repeat no-repeat
+    background $lightgreen
+    background linear-gradient(150deg, rgba(0,150,136,0.2497199563419118) 0%, rgba(0,150,136,0.3925770991990546) 50%, rgba(0,150,136,0.6894958667060574) 100%) fixed
+    
+h1, h2, h3, h4, h5, h6
+    margin-bottom 20px
+    
+h1
+    font-size 60px
+    font-weight 700
+    
+h2
+    font-size 50px
+    font-weight 600
+    
+h3
+    font-size 40px
+    font-weight 500
+
+h4
+    font-size 30px
+    font-weight 400
+    
+h5
+    font-size 20px
+    font-weight 300
+    
+h6
+    font-size 10px
+    font-weight 300
+    
+header
+    width 100%
+    padding 20px 0
+    display flex
+    flex-wrap wrap
+    align-items center
+    
+ul
+    padding 10px 40px
+    
+table
+    width 100%
+    border 1px solid $black
+    margin 10px 0
+    border-collapse collapse
+    
+tr, td, th
+    padding 10px
+    border 1px solid $black
+pre
+  background #383838 !important
+  word-wrap break-word
+  white-space pre-wrap
+  padding 10px
+  font-size 14px
+  border-radius 3px
+  margin 10px 0
+  code
+    background inherit
+    font-weight 400
+  
+p
+    line-height 28px
+    
+code
+    font-weight 700
+    
+#logo
+    flex 1
+    min-width 250px
+    img
+        width 100%
+        padding-right 20px
+        border-right 2px solid $darkgrey
+        
+#nav
+    flex 7
+    height 100%
+    padding-top 5px
+    list-style none
+    li
+        display inline-block
+        margin-left 10px
+    a
+        color $darkgrey
+        text-decoration none
+        text-transform uppercase
+        font-weight 600
+        font-size 0.87em
+        transition all .3s linear
+        &:hover
+            transition all .3s linear
+            color $black
+            
+#main-content
+    display flex
+    flex-wrap wrap
+    
+#why
+    list-style none
+    h5
+        font-weight 700
+    li
+        margin-top 20px
+    p
+        color darken($darkgrey, 30%)
+        
+#main-docs
+    display flex
+    flex-wrap wrap
+    #aside
+        flex 2
+    #docs-content
+        flex 4
+    
+#aside
+    padding 20px
+    ul
+        list-style none
+        padding 0 10px
+    h5
+        margin-bottom 0 !important
+        font-weight 700
+    a
+        color $darkgrey
+        text-decoration none
+        &:hover
+            color $green
+            text-decoration underline
+            
+.blog-post
+    margin-bottom 20px
+    h2
+        color $green
+    .actions
+        text-align right
+        padding 10px 0
+    .button
+        font-weight 400
+        
+#footer
+    padding 30px 0
+    color $darkgrey
+    a.button
+        font-weight 400
+        font-size 14px
+        color $white
+        margin-right 5px
+        transition all .3s linear
+        &:hover
+            transition all .3s linear
+            color $white
+    a
+        color $darkgrey
+        text-decoration none
+        font-size 14px
+        transition all .3s linear
+        &:hover
+            color $black
+            transition all .3s linear
+            
