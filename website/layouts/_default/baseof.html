@@ -8,11 +8,13 @@
 <body>
     <header>
         <a id="logo" href="/"><img src="/images/logo.png" alt="Saleina CMS logo"></a>
-        <ul id="nav">
-            <li><a href="/docs/introduction/">docs</a></li>
-            <li><a href="/blog/">blog</a></li>
-        </ul>
-        <a href="https://demo.saleinacms.org" class="button">demo</a>
+        <div id="nav">
+            <ul id="sub-nav">
+                <li><a href="/docs/introduction/">docs</a></li>
+                <li><a href="/blog/">blog</a></li>
+            </ul>
+            <a href="https://demo.saleinacms.org" class="button">demo</a>
+        </div>
     </header>
 
     <main id="main">
@@ -21,10 +23,13 @@
     </main>
 
     <footer id="footer">
-        <a class="button" href="https://gitlab.com/saleina/saleinacms">GitLab</a>
-        <a class="button" href="tg://resolve?domain=saleinacms">Telegram</a>
-        <a href="https://gitlab.com/saleina/saleinacms/LICENSE">Distributed under MIT License</a> | <a href="https://gitlab.com/saleina/saleinacms/CODE_OF_CONDUCT.md">Code of Conduct</a>
-
+        <div id="social">
+            <a class="button" href="https://gitlab.com/saleina/saleinacms">GitLab</a>
+            <a class="button" href="tg://resolve?domain=saleinacms">Telegram</a>
+        </div>
+        <div id="extra">
+            <a href="https://gitlab.com/saleina/SaleinaCMS/blob/master/LICENSE">Distributed under MIT License</a> | <a href="https://gitlab.com/saleina/SaleinaCMS/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+        </div>
     </footer>
 </body>
 </html>

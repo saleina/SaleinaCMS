@@ -50,19 +50,19 @@ h1, h2, h3, h4, h5, h6
     margin-bottom 20px
     
 h1
-    font-size 60px
+    font-size 40px
     font-weight 700
     
 h2
-    font-size 50px
+    font-size 35px
     font-weight 600
     
 h3
-    font-size 40px
+    font-size 30px
     font-weight 500
 
 h4
-    font-size 30px
+    font-size 25px
     font-weight 400
     
 h5
@@ -117,11 +117,17 @@ code
         width 100%
         padding-right 20px
         border-right 2px solid $darkgrey
-        
+     
 #nav
+    display flex
+    justify-content space-between
     flex 7
-    height 100%
-    padding-top 5px
+    height 100%   
+    min-width 300px
+    padding 10px
+    
+#sub-nav
+    padding 0
     list-style none
     li
         display inline-block
@@ -157,6 +163,7 @@ code
         flex 2
     #docs-content
         flex 4
+        padding 0 10px
     
 #aside
     padding 20px
@@ -184,8 +191,11 @@ code
         font-weight 400
         
 #footer
-    padding 30px 0
+    padding 30px 10px
+    display flex
+    justify-content space-between
     color $darkgrey
+    flex-wrap wrap
     a.button
         font-weight 400
         font-size 14px
@@ -204,3 +214,5 @@ code
             color $black
             transition all .3s linear
             
+#social
+    min-width 300px
