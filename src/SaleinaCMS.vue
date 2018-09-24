@@ -18,7 +18,6 @@
         width: 100%;
         height: 100%;
         font-size: 2.5em;
-        background: var(--green);
         color: var(--red);
         justify-content: center;
         align-items: center;

@@ -194,9 +194,17 @@ new Vue({
 
         } catch(error) {
 
-            store.commit("logout");
+            if (error.name === "PermissionError") {
 
-            store.commit("updateConfigErrorMessage", "Configuration Errors! Please check your console for details");
+                store.commit("updateConfigErrorMessage", "It seems you don't have access to this site!")
+
+            } else {
+
+                store.commit("updateConfigErrorMessage", "Configuration Errors! Please check your console for details");
+
+            }
+
+            store.commit("logout");
 
             store.commit("updateConfigError", true);
 
