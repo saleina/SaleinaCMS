@@ -89,6 +89,9 @@
 						type: "success"
 					});
 
+					// call webhook for updated
+					if (this.collection.hooks.updated) this.$fetch(this.collection.hooks.updated, "PUT", data);
+
 					this.updateLoading = false;
 
 				} catch(error) {
@@ -118,6 +121,9 @@
 					this.$toasted.show("Deleted successfully", {
 						type: "success"
 					});
+
+					// call webhook for deleted
+					if (this.collection.hooks.deleted) this.$fetch(this.collection.hooks.deleted, "DELETE", this.data);
 
 					this.$router.replace(`/collections/${this.collection.name}/?page=1`);
 

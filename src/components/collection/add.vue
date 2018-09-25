@@ -102,6 +102,8 @@
 
 					await this.$store.dispatch("addFile", data);
 
+					if (this.collection.hooks.created) this.$fetch(this.collection.hooks.created, "POST", data);
+
 					this.$toasted.show("Successfully Saved", {
 						type: "success"
 					});

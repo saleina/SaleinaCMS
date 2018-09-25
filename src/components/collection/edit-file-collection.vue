@@ -87,6 +87,8 @@
 						type: "success"
 					});
 
+					if (this.collection.hooks.updated) this.$fetch(this.collection.hooks.updated, "PUT", data);
+
 					this.updateLoading = false;
 
 				} catch(error) {

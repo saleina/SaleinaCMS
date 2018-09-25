@@ -4,8 +4,7 @@
 </template>
 
 <script>
-
-	import { getSchemaForFields } from "../../utils/schema";
+	
 	import EditFileCollection from "./edit-file-collection";
 	import EditFolderCollection from "./edit-folder-collection";
 

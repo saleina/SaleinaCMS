@@ -338,6 +338,21 @@ const tabs = {
     }
 };
 
+const hooks = {
+    type: "object",
+    properties: {
+        created: {
+            type: "string"
+        },
+        updated: {
+            type: "string"
+        },
+        deleted: {
+            type: "string"
+        }
+    }
+}
+
 const folderCollections = {
     $id: "https://saleinacms.com/schemas/folder-collections.json",
     type: "object",
@@ -361,6 +376,7 @@ const folderCollections = {
         description: {
             type: "string"
         },
+        hooks: hooks,
         type: {
             type: "string",
             enum: [
@@ -385,12 +401,16 @@ const fileCollections = {
         label: {
             type: "string"
         },
+        delete: {
+            type: "boolean"
+        },
         name: {
             type: "string"
         },
         description: {
             type: "string"
         },
+        hooks: hooks,
         files: {
             type: "array",
             minItems: 1,
