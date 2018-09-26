@@ -59,11 +59,24 @@ The `collections` setting is the heart of your Saleina CMS configuration, as it 
 - `file` or `folder` (requires one of these): specifies the collection type and location; details in [Collection Types](/docs/collection-types)
 - `create`: for `folder` collections only; `true` allows users to create new items in the collection; defaults to `false`
 - `delete`: `false` prevents users from deleting items in a collection; defaults to `true`
+- `hooks`: see detailed description below
 - `type`: see detailed description below
 - `slug`: see detailed description below
 - `tabs` (required): see detailed description below
 
 The last few options require more detailed information.
+
+### `hooks`
+
+Hooks allow you to be notified when certain actions occur in Saleina CMS, it allows limitless integrations and possibilities.
+
+`hooks` accepts the following properties
+
+- `created`: Accepts a url to be notified when a new item is created in a folder collection, it receives the following data with a `POST` method
+
+- `updated`: Accepts a url to be notified when an item in a file or folder collection is updated, it receives the following data with a `PUT` method
+
+- `deleted`: Accepts a url to be notified when an item in a file or folder collection is deleted, it receives the following data with `DELETED` method.
 
 ### `type`
 
