@@ -74,23 +74,16 @@
 
 				this.updateLoading = true;
 
-				let data = JSON.parse(JSON.stringify(this.data));
-
-				let file = getFileFromData(data, this.type);
-
 				try {
 
-					await this.$store.dispatch("updateFile", {
-						path: this.path,
-						content: file
-					});
+					await this.$store.dispatch("updateFile", this.properData);
 
 					this.$toasted.show("Successfully Saved", {
 						type: "success"
 					});
 
-					// call webhook for updated
-					if (this.collection.hooks.updated) this.$fetch(this.collection.hooks.updated, "PUT", data);
+					// call updated webhook 
+					if (this.collection.hooks && this.collection.hooks.updated) this.$fetch(this.collection.hooks.updated, "PUT", this.properData);
 
 					this.updateLoading = false;
 
@@ -110,8 +103,6 @@
 
 			async _remove() {
 
-				this.deleteLoading = true;
-
 				try {
 
 					await this.$store.dispatch("deleteFile", {
@@ -122,8 +113,8 @@
 						type: "success"
 					});
 
-					// call webhook for deleted
-					if (this.collection.hooks.deleted) this.$fetch(this.collection.hooks.deleted, "DELETE", this.data);
+					// call deleted webhook
+					if (this.collection.hooks && this.collection.hooks.deleted) this.$fetch(this.collection.hooks.deleted, "DELETE", this.properData);
 
 					this.$router.replace(`/collections/${this.collection.name}/?page=1`);
 
@@ -215,6 +206,24 @@
             	});
 
             }
+
+		},
+
+		computed: {
+
+			properData() {
+
+				let data = JSON.parse(JSON.stringify(this.data));
+
+				let file = getFileFromData(data, this.type);
+
+				return {
+					path: this.path,
+					content: file,
+					branch: this.$store.getters.branch
+				};
+
+			}
 
 		},
 

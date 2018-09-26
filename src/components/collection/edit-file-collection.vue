@@ -72,22 +72,16 @@
 
 				this.updateLoading = true;
 
-				let file = getFileFromData(this.data, this.type);
-
-				let data = {
-					path: this.collection.file,
-					content: file
-				};
-
 				try {
 
-					await this.$store.dispatch("updateFile", data);
+					await this.$store.dispatch("updateFile", this.properData);
 
 					this.$toasted.show("Successfully Saved", {
 						type: "success"
 					});
 
-					if (this.collection.hooks.updated) this.$fetch(this.collection.hooks.updated, "PUT", data);
+					// call updated webhook
+					if (this.collection.hooks && this.collection.hooks.updated) this.$fetch(this.collection.hooks.updated, "PUT", this.properData);
 
 					this.updateLoading = false;
 
@@ -116,6 +110,8 @@
 					this.$toasted.show("Deleted successfully", {
 						type: "success"
 					});
+
+					if (this.collection.hooks && this.collection.hooks.deleted) this.$fetch(this.collection.hooks.deleted, "DELETE", this.properData);
 
 					this.$router.replace(`/collections/${this.$route.params.name}/`);
 
@@ -212,6 +208,20 @@
 
 			}
 
+		},
+
+		computed: {
+			properData() {
+
+				let file = getFileFromData(this.data, this.type);
+
+				return {
+					path: this.collection.file,
+					content: file,
+					branch: this.$store.getters.branch
+				};
+
+			}
 		},
 
 		watch: {

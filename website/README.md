@@ -15,5 +15,4 @@ From your terminal window, `cd` into the `website` directory of the repo, and ru
 hugo server
 ```
 
-Then visit http://localhost:1313/ - Hugo will automatically reload CSS or
-refresh the page when stylesheets or content changes.
+Then visit http://localhost:1313/ - Hugo will automatically refresh the page when stylesheets or content changes.

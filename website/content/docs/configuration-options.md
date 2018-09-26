@@ -72,11 +72,21 @@ Hooks allow you to be notified when certain actions occur in Saleina CMS, it all
 
 `hooks` accepts the following properties
 
-- `created`: Accepts a url to be notified when a new item is created in a folder collection, it receives the following data with a `POST` method
+- `created`: Accepts a url to be notified when a new item is created in a folder collection, it sends the created data with a `POST` method
 
-- `updated`: Accepts a url to be notified when an item in a file or folder collection is updated, it receives the following data with a `PUT` method
+- `updated`: Accepts a url to be notified when an item in a file or folder collection is updated, it sends the updated data with a `PUT` method
 
-- `deleted`: Accepts a url to be notified when an item in a file or folder collection is deleted, it receives the following data with `DELETED` method.
+- `deleted`: Accepts a url to be notified when an item in a file or folder collection is deleted, it sends the deleted data with `DELETE` method.
+
+**Example data:**
+
+```json
+{
+  "path": "data/settings.json",
+  "content": "{}",
+  "branch": "master"
+}
+```
 
 ### `type`
 

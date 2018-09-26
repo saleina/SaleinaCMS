@@ -11,6 +11,11 @@ collections:
     - label: Blog
       name: blog
       folder: website/content/blog
+      delete: true
+      hooks:
+        created: "https://localhost:8080/created"
+        updated: "https://localhost:8080/updated"
+        deleted: "https://localhost:8080/deleted"
       tabs:
         - label: Basic
           fields:
@@ -22,6 +27,7 @@ collections:
 
     - label: Docs
       name: docs
+      create: false
       folder: website/content/docs
       tabs:
         - label: Basic
