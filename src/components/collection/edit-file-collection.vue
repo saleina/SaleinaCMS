@@ -87,6 +87,8 @@
 
 				} catch(error) {
 
+					console.error(error);
+
 					this.$toasted.show("Connection error while trying to save", {
 						type: "error"
 					});

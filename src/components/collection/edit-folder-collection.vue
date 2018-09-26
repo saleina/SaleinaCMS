@@ -82,7 +82,7 @@
 						type: "success"
 					});
 
-					// call updated webhook 
+					// call updated webhook
 					if (this.collection.hooks && this.collection.hooks.updated) this.$fetch(this.collection.hooks.updated, "PUT", this.properData);
 
 					this.updateLoading = false;

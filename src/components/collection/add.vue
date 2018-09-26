@@ -102,15 +102,16 @@
 
 					await this.$store.dispatch("addFile", data);
 
-					if (this.collection.hooks.created) this.$fetch(this.collection.hooks.created, "POST", data);
+					this.$router.replace(`/collections/${this.collection.name}/${fileName}`);
 
 					this.$toasted.show("Successfully Saved", {
 						type: "success"
 					});
 
-					this.$router.replace(`/collections/${this.collection.name}/${fileName}`);
-
 					this.loading = false;
+
+					// call webhook for created
+					if (this.collection.hooks && this.collection.hooks.created) this.$fetch(this.collection.hooks.created, "POST", data);
 
 				} catch(error) {
 
