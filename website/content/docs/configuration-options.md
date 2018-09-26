@@ -78,6 +78,29 @@ Hooks allow you to be notified when certain actions occur in Saleina CMS, it all
 
 - `deleted`: Accepts a url to be notified when an item in a file or folder collection is deleted, it sends the deleted data with `DELETE` method.
 
+**Example:**
+
+```yaml
+collections:
+    - label: "Blog"
+      name: "blog"
+      folder: "website/content/blog"
+      delete: true
+      hooks:
+        created: "https://example.com/blog/" # url to be called when a new blog post is created
+        updated: "https://example.com/blog/" # url to be called when a blog post is updated
+        deleted: "https://example.com/blog/" # url to be called when a blog post is deleted
+      tabs:
+        - label: "Basic"
+          fields:
+            - {label: "Draft", name: "draft", widget: "boolean", default: true}
+            - {label: "Title", name: "title", widget: "string"}
+            - {label: "Publish Date", name: "date", widget: "datetime", format: "Z"}
+        - label: "Body"
+          fields:
+            - {label: "Body", name: "body", widget: "markdown"}
+```
+
 **Example data:**
 
 ```json
