@@ -21,7 +21,7 @@ Read more about Saleina CMS [Introduction](https://saleinacms.org/docs/introduct
 
 # Installation and Configuration
 
-A Quick and easy install, that just requires you to create a single HTML file and a configuration file. All the CMS files are loaded from a CDN. To learn more about this installation method, refer to the [Docs](https://saleinacms.org/docs/)
+A Quick and easy install, that just requires you to create a single HTML file and a configuration file. All the CMS files are loaded from a CDN. To learn more about this installation method, refer to the [Docs](https://saleinacms.org/docs/introduction/)
 
 # Support Us
 
