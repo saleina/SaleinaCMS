@@ -23,6 +23,10 @@ Read more about Saleina CMS [Introduction](https://saleinacms.org/docs/).
 
 A Quick and easy install, that just requires you to create a single HTML file and a configuration file. All the CMS files are loaded from a CDN. To learn more about this installation method, refer to the [Docs](https://saleinacms.org/docs/)
 
+# Support Us
+
+<a href="https://www.patreon.com/bePatron?u=13775036" data-patreon-widget-type="become-patron-button">Become a Patron!</a>
+
 # Change Log
 
 This project adheres to [Semantic Versioning](http://semver.org/).
