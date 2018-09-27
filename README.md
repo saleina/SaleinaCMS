@@ -25,7 +25,7 @@ A Quick and easy install, that just requires you to create a single HTML file an
 
 # Support Us
 
-<a href="https://www.patreon.com/bePatron?u=13775036" data-patreon-widget-type="become-patron-button">Become a Patron!</a>
+<a href="https://www.patreon.com/bePatron?u=13775036" data-patreon-widget-type="become-patron-button"><img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png"></a>
 
 # Change Log
 
