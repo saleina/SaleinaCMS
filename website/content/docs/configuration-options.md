@@ -6,7 +6,7 @@ group: reference
 
 All configuration options for Saleina CMS are specified in a `config.yml` file, in the folder where you access the editor UI (usually in the `/admin` folder).
 
-To see working configuration examples check out the [CMS demo site](https://demo.saleinacms.org). (No login required: click the login button and the CMS will open.) You can refer to the demo [configuration code](https://gitlab.com/saleina/saleinacms/blob/master/public/config.yml) to see how each option was configured.
+To see working configuration examples check out the [CMS demo site](https://demo.saleinacms.org). (No login required: click the login button and the CMS will open.) You can refer to the demo [configuration code](https://github.com/saleina/saleinacms/blob/master/public/config.yml) to see how each option was configured.
 
 You can find details about all configuration options below. Note that [YAML syntax](https://en.wikipedia.org/wiki/YAML#Basic_components) allows lists and objects to be written in block or inline style, and the code samples below include a mix of both.
 
