@@ -12,7 +12,7 @@ please read the [code of conduct](CODE_OF_CONDUCT.md).
 > Only required on the first run, subsequent runs can use `npm run serve` to run the development server.
 
 ```sh
-$ git clone https://gitlab.com/saleina/SaleinaCMS
+$ git clone https://github.com/saleina/SaleinaCMS
 $ cd SaleinaCMS
 $ npm install
 ```
