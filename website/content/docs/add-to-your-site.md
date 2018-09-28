@@ -7,6 +7,7 @@ group: start
 Saleina CMS is adaptable to a wide variety of projects. It works with any content written in markdown, JSON, YAML, or TOML files, stored in a repo on [GitLab](https://about.gitlab.com/). You can also create your own custom backend.
 
 This tutorial will guide you through the steps for adding Saleina CMS to a site that's built with a common [static site generator](https://www.staticgen.com/), like Jekyll, Hugo, Hexo, or Gatsby.
+"
 
 ## App File Structure
 
@@ -46,7 +47,7 @@ The first file, `admin/index.html`, is the entry point for the Saleina CMS admin
             <strong>We're sorry but SaleinaCMS doesn't work without JavaScript enabled. Please enable it to continue.</strong>
         </noscript>
         <div id="SaleinaCMS"></div>
-        <script src="https://cdn.jsdelivr.net/npm/saleina-cms@0.1.8/dist/saleina-cms.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/saleina-cms@0.31.0/dist/saleina-cms.min.js"></script>
   </body>
 </html>
 ```

@@ -5,9 +5,17 @@
 
         <template v-else>
 
-            <img :src="src" class="picker" v-if="picker" @click="$emit('input', sitePath)"/>
+            <template v-if="isImage">
 
-            <img :src="src" v-else/>
+                <img :src="src" class="picker" v-if="picker" @click="$emit('input', sitePath)"/>
+
+                <img :src="src" v-else/>
+
+            </template>
+
+            <template v-else>
+                <h6>{{ fileName }}</h6>
+            </template>
 
         </template>
 
@@ -103,6 +111,26 @@ export default {
             let publicFolder = this.$store.getters.publicFolder || this.$store.getters.mediaFolder;
 
             return `${publicFolder}${this.value}`;
+
+        },
+
+        isImage() {
+
+            let images = ["jpg", "jpeg", "png", "gif", "bmp", "svg"];
+
+            let parts = this.repoPath.split(".");
+
+            let ext = parts[parts.length - 1];
+
+            return images.indexOf(ext) >= 0;
+
+        },
+
+        fileName() {
+
+            let parts = this.repoPath.split("/");
+
+            return parts[parts.length - 1];
 
         }
 
