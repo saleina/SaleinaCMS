@@ -15,6 +15,7 @@ import "./styles.css"; // global styles
 import router from "./router";
 import store from "./store";
 import gitlab from "./store/backends/gitlab";
+import testRepo from "./store/backends/test-repo";
 
 import SaleinaCMS from "./SaleinaCMS";
 
@@ -143,7 +144,7 @@ new Vue({
 
             store.commit("setCollections", objectifyCollections(config.collections));
 
-    		let backend = store.state.config.config.backend.name === "gitlab" ? gitlab : null;
+    		let backend = store.state.config.config.backend.name === "gitlab" ? gitlab : testRepo;
 
             store.registerModule("backend", backend);
 

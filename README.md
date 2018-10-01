@@ -19,6 +19,12 @@ they'll be able to create new content or edit existing content.
 
 Read more about Saleina CMS [Introduction](https://saleinacms.org/docs/introduction/).
 
+## Features
+
+- Basic CRUD
+- Webhooks
+- Demo
+
 # Installation and Configuration
 
 A Quick and easy install, that just requires you to create a single HTML file and a configuration file. All the CMS files are loaded from a CDN. To learn more about this installation method, refer to the [Docs](https://saleinacms.org/docs/introduction/)

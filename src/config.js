@@ -455,7 +455,7 @@ const gitlab = {
     properties: {
         name: {
             type: "string",
-            enum: ["gitlab"]
+            const: "gitlab"
         },
         repo: {
             type: "string",
@@ -471,6 +471,16 @@ const gitlab = {
     }
 };
 
+const test = {
+    required: ["name"],
+    properties: {
+        name: {
+            type: "string",
+            const: "test-repo"
+        }
+    }
+};
+
 export default {
     type: "object",
     required: ["backend", "collections", "media_folder"],
@@ -479,7 +489,8 @@ export default {
         backend: {
             type: "object",
             oneOf: [
-                gitlab
+                gitlab,
+                test
             ]
         },
 
