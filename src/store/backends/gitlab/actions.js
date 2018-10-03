@@ -1,4 +1,5 @@
 import MediaActions from "./media.actions";
+import MembersActions from "./members.actions";
 
 export default {
 
@@ -288,6 +289,8 @@ export default {
 
     },
 
-    ...MediaActions
+    ...MediaActions,
+
+    ...MembersActions
 
 };

@@ -11,5 +11,8 @@ export default {
         }
     },
     actions: actions,
-    mutations: mutations
+    mutations: mutations,
+    getters: {
+        supportsMemberManager: () => true
+    }
 };

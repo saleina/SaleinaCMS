@@ -24,6 +24,8 @@
 
 					<li><a href="/media/" @click.prevent="showMediaManager = true"><media-icon/> media</a></li>
 
+					<li v-if="$store.getters.supportsMemberManager"><router-link to="/members/"><people-icon/> Members</router-link></li>
+
 				</ul>
 
 				<div id="user" class="card">
@@ -60,6 +62,7 @@
 
 	import CollectionIcon from "@/assets/icons/collection.svg";
 	import MediaIcon from "@/assets/icons/media.svg";
+	import PeopleIcon from "@/assets/icons/people.svg";
 	import Logo from "@/assets/logo.green.svg";
 	import Media from "./media";
 
@@ -68,6 +71,7 @@
 		components: {
 			CollectionIcon,
 			MediaIcon,
+			PeopleIcon,
 			Logo,
 			Media
 		},

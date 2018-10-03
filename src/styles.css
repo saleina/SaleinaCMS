@@ -203,7 +203,7 @@ label.error {
     padding: 20px;
 }
 
-.collection-file {
+.collection-file, .member {
     margin: 20px 0;
     cursor: pointer;
     height: 60px;
