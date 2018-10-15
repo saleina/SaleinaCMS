@@ -27,6 +27,9 @@ A Quick and easy install, that just requires you to create a single HTML file an
 
 <a href="https://www.patreon.com/bePatron?u=13775036" data-patreon-widget-type="become-patron-button"><img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png"></a>
 
+## Our Sponsors
+<a href="https://m.do.co/c/2c318451e32c"><img src="https://opensource.nyc3.cdn.digitaloceanspaces.com/attribution/assets/SVG/DO_Logo_horizontal_blue.svg" width="300"></a>
+
 # Change Log
 
 This project adheres to [Semantic Versioning](http://semver.org/).
