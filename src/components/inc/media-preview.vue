@@ -14,7 +14,11 @@
             </template>
 
             <template v-else>
+                
+                <h6 class="picker" v-if="picker" @click="$emit('input', sitePath)">{{ fileName }}</h6>
+                
                 <h6>{{ fileName }}</h6>
+
             </template>
 
         </template>
@@ -153,6 +157,14 @@ export default {
     border: 1px solid var(--label-background);
     margin: 10px;
     text-align: center;
+}
+
+h6 {
+    color: var(--green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 img {
