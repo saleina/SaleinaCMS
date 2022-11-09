@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0",
-    "@vue/cli-service": "^3.0.0",
+    "@vue/cli-service": "^5.0.8",
     "nib": "^1.1.2",
     "stylus": "^0.54.5",
     "vue-svg-loader": "^0.5.0",
